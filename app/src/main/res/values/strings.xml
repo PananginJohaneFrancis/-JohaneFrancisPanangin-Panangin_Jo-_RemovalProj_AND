@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Listings</string>
+    <string name="add">Add</string>
+    <string name="listing_name">Listing Name</string>
+    <string name="cancel">Cancel</string>
+    <string name="confirm">Confirm</string>
+    <string name="add_listing">Add Listing</string>
+    <string name="edit_listing">Edit Listing</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+
+    <string name="name_cannot_be_empty">Name cannot be empty</string>
+    <string name="failed_fetch">Failed to fetch listings</string>
+    <string name="failed_add">Failed to add listing</string>
+    <string name="failed_update">Failed to update listing</string>
+    <string name="failed_delete">Failed to delete listing</string>
+</resources>

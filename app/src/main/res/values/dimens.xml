@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="paddingLarge">32dp</dimen>
+    <dimen name="paddingMedium">16dp</dimen>
+    <dimen name="paddingSmall">8dp</dimen>
+
+    <dimen name="marginLarge">24dp</dimen>
+    <dimen name="marginMedium">12dp</dimen>
+    <dimen name="marginSmall">6dp</dimen>
+
+    <dimen name="moreMenuBtn">30dp</dimen>
+
+    <dimen name="textLarge">30sp</dimen>
+    <dimen name="textMedium">25sp</dimen>
+    <dimen name="textSmall">20sp</dimen>
+    <dimen name="textExSmall">15sp</dimen>
+</resources>
