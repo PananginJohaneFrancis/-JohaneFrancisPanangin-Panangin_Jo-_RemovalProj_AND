@@ -31,26 +31,26 @@ class ListViewFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Initialize ViewModel
+        
         viewModel = ViewModelProvider(requireActivity())[ListingsViewModel::class.java]
 
-        // Setup ListView with Custom Adapter
+        
         adapter = ListingsAdapter()
         binding.listingsListView.adapter = adapter
 
-        // Observe Listings
+       
         viewModel.listings.observe(viewLifecycleOwner) { listings ->
             adapter.updateListings(listings)
         }
 
-        // Setup Item Click Listener with Popup Menu
+        
         binding.listingsListView.setOnItemClickListener { _, itemView, position, _ ->
             val listing = viewModel.listings.value?.get(position)
             listing?.let { showItemMenu(itemView, it) }
         }
     }
 
-    // Rest of the code remains the same...
+    
 
     inner class ListingsAdapter : BaseAdapter() {
         private var listings: List<Listing> = listOf()
@@ -75,10 +75,10 @@ class ListViewFragment : Fragment() {
 
             val listing = listings[position]
 
-            // Set listing name
+            
             binding.listingNameTextView.text = listing.name
 
-            // Setup menu button
+            
             binding.menuButton.setOnClickListener { view ->
                 showItemMenu(view, listing)
             }
