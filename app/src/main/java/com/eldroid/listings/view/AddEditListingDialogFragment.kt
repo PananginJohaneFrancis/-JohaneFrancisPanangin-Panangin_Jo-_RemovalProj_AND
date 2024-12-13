@@ -53,7 +53,7 @@ class AddEditListingDialogFragment : DialogFragment() {
         val window = dialog?.window
         val params = window?.attributes
 
-        // Get screen width and set dialog width to 80% of the screen width
+        
         val width = (resources.displayMetrics.widthPixels * 0.8).toInt()
         params?.width = width
 
@@ -63,26 +63,26 @@ class AddEditListingDialogFragment : DialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Initialize ViewModel
+        
         viewModel = ViewModelProvider(requireActivity())[ListingsViewModel::class.java]
 
-        // Set Dialog Title
+        
         val dialogTitle = arguments?.getString(ARG_DIALOG_TITLE)
         binding.dialogFragmentLabel.text = dialogTitle
 
-        // Populate current name for edit mode
+       
         val isEditMode = arguments?.getBoolean(ARG_IS_EDIT_MODE) ?: false
         if (isEditMode) {
             val currentName = arguments?.getString(ARG_CURRENT_NAME)
             binding.editListingNameEditText.setText(currentName)
         }
 
-        // Cancel Button
+        
         binding.cancelButton.setOnClickListener {
             dismiss()
         }
 
-        // Confirm Button
+       
         binding.confirmButton.setOnClickListener {
             val name = binding.editListingNameEditText.text.toString().trim()
 
