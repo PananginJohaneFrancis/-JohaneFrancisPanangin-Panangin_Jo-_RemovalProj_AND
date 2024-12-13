@@ -16,10 +16,10 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Setup ViewModel
+        
         viewModel = ViewModelProvider(this)[ListingsViewModel::class.java]
 
-        // Setup AppBar
+        
         binding.topAppBar.setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.action_add -> {
@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        // Initially load ListViewFragment
+        
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
                 .replace(R.id.fragmentContainer, ListViewFragment())
